@@ -1,5 +1,5 @@
 # rec
-rec is a linux command for recording your screen with ffmpeg
+rec is a linux command for recording your screen or window with ffmpeg
 # installation
 ```
 su
