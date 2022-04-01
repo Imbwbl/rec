@@ -1,4 +1,4 @@
-vidpath="/$HOME/$(date +%Y_%m_%d_%M_%S).mkv"
+vidpath="/$HOME/$(date +%Y_%m_%d_%H_%M_%S).mkv"
 if [ "$1" == "-screen" ] || [ "$1" == "-s" ] || [ "$1" == "-win" ] || [ "$1" == "-w" ] || [ "$1" == "-window" ]
   then
   if [ "$1" == "-win" ] || [ "$1" == "-w" ] || [ "$1" = "-window" ]
