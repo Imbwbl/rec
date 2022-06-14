@@ -3,11 +3,11 @@ if [ "$1" == "-screen" ] || [ "$1" == "-s" ] || [ "$1" == "-win" ] || [ "$1" == 
   then
   if [ "$1" == "-win" ] || [ "$1" == "-w" ] || [ "$1" = "-window" ]
     then
-    ffmpeg -window_id $(xwininfo | grep "Window id:" | cut --characters=22-30) -framerate 60 -f x11grab -i :0.0 -c:v libx264rgb -crf 0 -preset ultrafast -color_range 2 $vidpath
+    ffmpeg -window_id $(xwininfo | grep "Window id:" | cut --characters=22-30) -framerate 60 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast -color_range 2 $vidpath
   fi
   if [ "$1" == "-screen" ] || [ "$1" == "-s" ]
     then
-    ffmpeg -video_size 1920x1080 -framerate 60 -f x11grab -i :0.0 -c:v libx264rgb -crf 0 -preset ultrafast -color_range 2 $vidpath
+    ffmpeg -video_size 1920x1080 -framerate 60 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast -color_range 2 $vidpath
   fi
   else
   echo "Please use the -screen (-s) or the -window (-w)"
